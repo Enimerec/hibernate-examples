@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+
+        <property name = "hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver
+        </property>
+
+        <!-- Assume test is the database name -->
+
+        <property name = "hibernate.connection.url">
+            jdbc:mysql://127.0.0.1:3306/hrdatabase?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC
+        </property>
+
+        <property name = "hibernate.connection.username">
+            root
+        </property>
+
+        <property name = "hibernate.connection.password">
+            matmar321
+        </property>
+
+        <!-- List of XML mapping files -->
+        <mapping resource = "Employee.hbm.xml"/>
+        <mapping resource = "Department.hbm.xml"/>
+        <mapping class="com.github.pabloo99.entity.Country"/>
+        <mapping class="com.github.pabloo99.entity.JobHistory"/>
+        <mapping class="com.github.pabloo99.entity.Job"/>
+        <mapping class="com.github.pabloo99.entity.Location"/>
+        <mapping class="com.github.pabloo99.entity.Region"/>
+
+    </session-factory>
+</hibernate-configuration>
